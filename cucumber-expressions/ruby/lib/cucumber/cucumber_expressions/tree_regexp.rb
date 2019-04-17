@@ -36,7 +36,7 @@ module Cucumber
             non_capturing_maybe = false
           elsif char == '?' && last == '('
             non_capturing_maybe = true
-          elsif char == ':' || char == '!' && non_capturing_maybe
+          elsif (char == ':' || char == '!') && non_capturing_maybe
             stack.last.set_non_capturing!
             non_capturing_maybe = false
           elsif char == '<' && non_capturing_maybe
